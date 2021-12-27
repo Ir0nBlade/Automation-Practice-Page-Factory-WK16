@@ -31,16 +31,16 @@ public class OurStoresPage extends Utility {
     WebElement zoomOutButton;
 
 
-    public void clickOnOkButtonForPopUp() {
+    public void clickOnOkButtonForPopUp() throws InterruptedException {
+        Thread.sleep(1000);
         doClickOnElement(popUpOkButton);
         CustomListeners.test.log(Status.PASS,"Click ok on Pop Up ");
     }
 
-    public void scrollThroughMap() {
-
+    public void scrollThroughMap() throws InterruptedException {
+        Thread.sleep(1000);
         doClickOnElement(zoomOutButton);
         doClickOnElement(zoomOutButton);
-
         Actions builder = new Actions(driver);
         Action dragTheMap = builder.clickAndHold(map).moveByOffset(20, -200).moveToElement(map)
                 .release(map)

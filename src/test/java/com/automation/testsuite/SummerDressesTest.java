@@ -16,7 +16,7 @@ public class SummerDressesTest extends TestBase {
     ShoppingCartPage shoppingCartPage;
     SummerDressesPage summerDressesPage;
 
-    @BeforeMethod
+    @BeforeMethod (groups = {"sanity", "smoke", "regression"})
     public void initialize(){
         homePage = new HomePage();
         productPage = new ProductPage();
@@ -25,7 +25,7 @@ public class SummerDressesTest extends TestBase {
         summerDressesPage = new SummerDressesPage();
     }
 
-    @Test
+    @Test (groups = {"sanity"})
     public void verifyUserShouldNavigateToSummerCollection(){
         homePage.mouseHoverOnWomenTab();
         homePage.clickOnSummerDresses();

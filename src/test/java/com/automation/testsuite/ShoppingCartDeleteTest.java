@@ -19,7 +19,7 @@ public class ShoppingCartDeleteTest extends TestBase {
     WomenCategoryPage womenCategoryPage;
     ShoppingCartPage shoppingCartPage;
 
-    @BeforeMethod
+    @BeforeMethod (groups = {"sanity", "smoke", "regression"})
     public void initialize(){
         homePage = new HomePage();
         productPage = new ProductPage();
